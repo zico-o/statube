@@ -117,6 +117,26 @@ body {
   line-height: 1.4;
 }
 
+.fold summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.fold summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold summary::after {
+  content: "▾";
+  float: right;
+  color: #aaa;
+}
+
+.fold[open] summary::after {
+  content: "▴";
+}
+
+   
 /* ===============================
    タブ
 ================================ */
@@ -259,7 +279,6 @@ body {
               <div class="sub">1.2万回視聴・1日前</div>
             </div>
           </a>
-          </details>
         </div>
 
         <div class="video">
@@ -333,7 +352,7 @@ body {
             </div>
           </a>
         </div>
-         
+        </details>
       </div>
     </div>
 
